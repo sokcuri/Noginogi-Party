@@ -1,0 +1,267 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+//#include "afxres.h"
+#include <winresrc.h>
+#define IDC_STATIC (-1)
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Korean resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_KOREAN, SUBLANG_KOREAN
+//#pragma code_page(412)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 2010, 02, 25, 233
+ PRODUCTVERSION 2010, 02, 25, 233
+ FILEFLAGSMASK 0x17L
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "041204b0"
+        BEGIN
+            VALUE "Comments", "Noginogi PARTY"
+            VALUE "FileDescription", "진수의 노기노기 파티 lv233"
+            VALUE "FileVersion", "2010, 02, 25, 233"
+            VALUE "InternalName", "noginogi PARTY"
+            VALUE "LegalCopyright", "Copyright (C) Jinsu 2010, spr33 2009, chris & syoka 2008"
+            VALUE "OriginalFilename", "Mss32.dll"
+            VALUE "ProductName", "Noginogi PARTY lv233"
+            VALUE "ProductVersion", "2010, 02, 25, 233"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x412, 1200
+    END
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+500 BITMAP "splash.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+101 DIALOGEX 0, 0, 200, 118
+STYLE DS_CONTROL | DS_CENTER | WS_POPUP | WS_VISIBLE
+EXSTYLE WS_EX_TOPMOST | WS_EX_TOOLWINDOW
+CAPTION ""
+LANGUAGE LANG_KOREAN, 0x1
+FONT 10, "System"
+{
+   CONTROL 500, -1, STATIC, SS_BITMAP | WS_CHILD | WS_VISIBLE, 0, 0, 200, 118
+}
+
+102 DIALOG 9, 26, 183, 70
+STYLE WS_MINIMIZEBOX | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOPMOST
+CAPTION "ABCD"
+LANGUAGE LANG_KOREAN, 0x1
+FONT 9, "굴림"
+{
+}
+
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_NOGIPARTY_MENU MENU 
+BEGIN
+    POPUP "노기노기 파티"
+    BEGIN
+//        POPUP "CPU Limiter"
+//        BEGIN
+//            MENUITEM "Only limit while minimized",  ID_CPUMENU_WHILEMINIMIZED
+//            MENUITEM SEPARATOR
+//            MENUITEM "- 90% CPU Usage",             ID_CPUMENU_90
+//            MENUITEM "- 80% CPU Usage",             ID_CPUMENU_80
+//            MENUITEM "- 70% CPU Usage",             ID_CPUMENU_70
+//            MENUITEM "- 60% CPU Usage",             ID_CPUMENU_60
+//            MENUITEM "- 50% CPU Usage",             ID_CPUMENU_50
+//            MENUITEM "- 40% CPU Usage",             ID_CPUMENU_40
+//            MENUITEM "- 30% CPU Usage",             ID_CPUMENU_30
+//            MENUITEM "- 20% CPU Usage",             ID_CPUMENU_20
+//            MENUITEM "- 10% CPU Usage",             ID_CPUMENU_10
+//            MENUITEM "Disabled",                    ID_CPUMENU_OFF
+//        END
+        POPUP "써드 파티"
+        BEGIN
+            MENUITEM "NPC 이벤트 이동",				ID_TOGGLE_MOVEWHILETALKING
+            MENUITEM "노기노기 스카우터",			ID_TOGGLE_SHOWCOMBATPOWER
+            MENUITEM "파티창 시간 무제한",			ID_TOGGLE_UNLIMITPARTYTIME
+			MENUITEM "아이템 드롭 보호",			ID_TOGGLE_ITEMDROPPRESERVATION
+			MENUITEM "툴팁 상점가 표시",			ID_TOGGLE_SHOWITEMPRICE
+			MENUITEM "인프레임 윈도우 보호",		ID_TOGGLE_INFRAMEWINPSV
+		END
+		POPUP "일반 기능"
+		BEGIN
+			MENUITEM "스페이스바 캐릭터 동결 해제",	ID_TOGGLE_SPACEUNLOCK
+            MENUITEM "노기노기 이름 컬러링",		ID_TOGGLE_ENABLENAMECOLORING
+            MENUITEM "자기 거래 활성화",			ID_TOGGLE_ENABLESELFRIGHTCLICK
+			MENUITEM "노기노기 시간 알람"			ID_TOGGLE_TIMEALERM
+			MENUITEM "파티 게시판 스왑",			ID_TOGGLE_PARTY2ADVER
+            MENUITEM "노기노기 내구도 확장",		ID_TOGGLE_EXTENDDURABILITY
+            MENUITEM "아이템 색상 코드 보기",		ID_TOGGLE_SHOWITEMCOLOR
+			MENUITEM "인벤토리 컬러링",				ID_TOGGLE_INVENTORYCOLORING
+			MENUITEM "스탯 소수점",					ID_TOGGLE_STATSFLOATING
+
+
+//            MENUITEM "아이템 상점가 보기",				ID_TOGGLE_SHOWITEMPRICE
+//          MENUITEM "주간 효과 제거",				ID_TOGGLE_DISABLESUNTIME
+		END
+		POPUP "소소한 기능"
+        BEGIN
+//            MENUITEM "로그인 딜레이 제거",			ID_TOGGLE_REMOVELOGINDELAY
+            MENUITEM "비트맵 폰트 사용",				ID_TOGGLE_USEBITMAPFONTS
+            MENUITEM "프롭 타케팅",						ID_TOGGLE_TARGETPROPS
+			MENUITEM "분단위 시계",						ID_TOGGLE_MINUTECLOCK
+			MENUITEM "스킬키에 아이템 올리기",			ID_TOGGLE_ANYPUTSKILLFX
+			MENUITEM "제로 고도 비행",					ID_TOGGLE_FLYZEROHIGH
+			MENUITEM "미믹 이름표",						ID_TOGGLE_MIMICNAMING
+			MENUITEM "NPC 장비보기",					ID_TOGGLE_NPCEQUIPVIEW
+			MENUITEM "데들리 생명력 표시",				ID_TOGGLE_DEADLYHPSHOW
+
+//            POPUP "스크린샷 화질 조정"
+//            BEGIN
+//                MENUITEM "100",							ID_SSQUALITY_100
+//                MENUITEM "90",							ID_SSQUALITY_90
+//                MENUITEM "75",							ID_SSQUALITY_75
+//                MENUITEM "50",							ID_SSQUALITY_50
+//            END
+		END
+		POPUP "불편 해소"
+        BEGIN
+            MENUITEM "야간 조명 확장",				ID_TOGGLE_DISABLENIGHTTIME
+            MENUITEM "접속한 채널 재접속",			ID_TOGGLE_MOVETOSAMECHANNEL
+            MENUITEM "정령 안끼고 대화하기",        ID_TOGGLE_TALKTOUNEQUIPPEDEGO
+//			MENUITEM "가방 항상 열기",				ID_TOGGLE_ALWAYSBAGVIEW
+			MENUITEM "은행 탭 항상 활성화",			ID_TOGGLE_BANKTABENABLE
+			MENUITEM "컷신 빠르게 스킵",			ID_TOGGLE_CUTSCENEIMMEDIATESKIP
+			MENUITEM "빛무리 눈부심 없애기",		ID_TOGGLE_NOREFLEXLIGHT
+		END
+		POPUP "시야 설정"
+		BEGIN
+			POPUP "멀리보기"
+			BEGIN
+				MENUITEM "5000",                    ID_ZOOMLIMIT_5000
+				MENUITEM "3500",                    ID_ZOOMLIMIT_3500
+				MENUITEM SEPARATOR
+				MENUITEM "1500 (기본값)",           ID_ZOOMLIMIT_1500
+			END
+			POPUP "가까이보기"
+			BEGIN
+				MENUITEM "300",                    ID_ZOOMNEAR_300
+				MENUITEM "400",                    ID_ZOOMNEAR_400
+				MENUITEM SEPARATOR
+				MENUITEM "500 (기본값)",           ID_ZOOMNEAR_500
+			END
+			MENUITEM SEPARATOR
+			MENUITEM "게시판 멀리서 열기",			ID_TOGGLE_EXPRESSBOARD
+            MENUITEM "개인상점 멀리서 열기",		ID_TOGGLE_ENTERREMOTESHOP
+			MENUITEM "시야 내 모든 이름표",			ID_TOGGLE_VISIONINALLNAME
+			MENUITEM "표지판 멀리서 읽기",			ID_TOGGLE_FARSIGNREAD
+		END
+//		POPUP "비공개 기능"
+//		BEGIN
+//			MENUITEM "하이드 캐릭터 보기",			ID_TOGGLE_HIDEVISIBLE
+//			MENUITEM "캐릭터 오브젝트 리무브",		ID_TOGGLE_OBJECTREMOVE
+//		END
+		POPUP "환경 최적화"
+        BEGIN
+			MENUITEM "간소화 프레임 무시",			ID_TOGGLE_SIMPLEFRAMEIGNORE
+//			MENUITEM "변신 효과 무시",				ID_TOGGLE_TRANSFORMIGNORE
+//			MENUITEM "캐릭터 오브젝트 리무브",		ID_TOGGLE_OBJECTREMOVE
+		END
+//		MENUITEM SEPARATOR
+//		MENUITEM "하이드 캐릭터 보기",				ID_TOGGLE_HIDEVISIBLE
+
+//		MENUITEM "dev1",				ID_TOGGLE_DEV1
+
+//	    POPUP "미작동 기능"
+//        BEGIN
+//            MENUITEM "Show True Food Quality",      ID_TOGGLE_SHOWTRUEFOODQUALITY
+//
+		MENUITEM SEPARATOR
+		MENUITEM "설정파일 열기",		 ID_EXECUTESETTINGS
+        MENUITEM "설정 다시읽기",        ID_RELOADSETTINGS
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+//IDI_ICON_ORANGE         ICON                    ".\\mabi_icon_1.ico"
+//IDI_ICON_BLACK          ICON                    ".\\mabi_icon_2.ico"
+//IDI_ICON_BLUE           ICON                    ".\\mabi_icon_3.ico"
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,95 @@
+0xB9, 0x90, 0x5F, 0x01, 0x00,		// MOV ECX,15F90h
+0xF7, 0xF1,				// DIV ECX
+0xB9, 0xDC, 0x05, 0x00, 0x00,		// MOV ECX,5DCh
+0x8B, 0xC2,				// MOV EAX,EDX
+0x33, 0xD2, 				// XOR EDX,EDX
+0xF7, 0xF1,				// DIV ECX
+
+5DCh(1500) -> 96h(150)
+
+63980D99   8945 54          MOV DWORD PTR SS:[EBP+54],EAX
+63980D9C   8B45 4C          MOV EAX,DWORD PTR SS:[EBP+4C]
+63980D9F   6A 0A            PUSH 0A
+63980DA1   59               POP ECX
+63980DA2   33D2             XOR EDX,EDX
+63980DA4   F7F1             DIV ECX
+63980DA6   8B0D FCF1CE63    MOV ECX,DWORD PTR DS:[<&ESL.?g_cCultural>; ESL.?g_cCulturalInformationBlock@esl@@3PAEA
+
+
+
+63AA718C   74 0F            JE SHORT Pleione.63AA719D
+63AA718E   FF75 0C          PUSH DWORD PTR SS:[EBP+C]
+63AA7191   E8 60FC0600      CALL Pleione.63B16DF6
+63AA7196   8BCE             MOV ECX,ESI
+63AA7198   E8 87F9FFFF      CALL Pleione.63AA6B24
+63AA719D   FF75 08          PUSH DWORD PTR SS:[EBP+8]
+63AA71A0   8B8E 80000000    MOV ECX,DWORD PTR DS:[ESI+80]
+63AA71A6   E8 08D60000      CALL Pleione.63AB47B3
+63AA71AB   8B06             MOV EAX,DWORD PTR DS:[ESI]
+63AA71AD   8BCE             MOV ECX,ESI
+63AA71AF   FF90 F4010000    CALL DWORD PTR DS:[EAX+1F4]
+63AA71B5   84C0             TEST AL,AL
+63AA71B7   0F84 1A020000    JE Pleione.63AA73D7
+63AA71BD   8B8E 18010000    MOV ECX,DWORD PTR DS:[ESI+118]
+63AA71C3   FF15 7818CF63    CALL DWORD PTR DS:[<&Standard.?IsUsingNa>; Standard.?IsUsingNaosSupport@IServiceMgr@core@@QBE_NXZ
+63AA71C9   BF 88130000      MOV EDI,1388
+63AA71CE   84C0             TEST AL,AL
+63AA71D0   75 14            JNZ SHORT Pleione.63AA71E6
+63AA71D2   8B8E 18010000    MOV ECX,DWORD PTR DS:[ESI+118]
+63AA71D8   FF15 7C18CF63    CALL DWORD PTR DS:[<&Standard.?IsUsingCh>; Standard.?IsUsingChristmasEventNaosRespawn@IServiceMgr@core@@QBE_NXZ
+63AA71DE   84C0             TEST AL,AL
+63AA71E0   0F84 0D010000    JE Pleione.63AA72F3
+63AA71E6   6A 2B            PUSH 2B
+63AA71E8   FF15 B013CF63    CALL DWORD PTR DS:[<&Standard.?Instance@>; Standard.?Instance@CFeatureMatrix@core@@SAAAV12@XZ
+63AA71EE   8BC8             MOV ECX,EAX
+63AA71F0   FF15 B413CF63    CALL DWORD PTR DS:[<&Standard.?IsEnable@>; Standard.?IsEnable@CFeatureMatrix@core@@QBE_NW4EGameFeature@2@@Z
+63AA71F6   84C0             TEST AL,AL
+63AA71F8   0F84 F5000000    JE Pleione.63AA72F3
+63AA71FE   68 A5000000      PUSH 0A5
+63AA7203   FF15 B013CF63    CALL DWORD PTR DS:[<&Standard.?Instance@>; Standard.?Instance@CFeatureMatrix@core@@SAAAV12@XZ
+63AA7209   8BC8             MOV ECX,EAX
+63AA720B   FF15 B413CF63    CALL DWORD PTR DS:[<&Standard.?IsEnable@>; Standard.?IsEnable@CFeatureMatrix@core@@QBE_NW4EGameFeature@2@@Z
+63AA7211   84C0             TEST AL,AL
+63AA7213   0F85 DA000000    JNZ Pleione.63AA72F3
+63AA7219   8D45 D8          LEA EAX,DWORD PTR SS:[EBP-28]
+63AA721C   50               PUSH EAX
+63AA721D   8D45 E4          LEA EAX,DWORD PTR SS:[EBP-1C]
+63AA7220   50               PUSH EAX
+63AA7221   8D45 E8          LEA EAX,DWORD PTR SS:[EBP-18]
+63AA7224   50               PUSH EAX
+63AA7225   FF15 D813CF63    CALL DWORD PTR DS:[<&Standard.?stdapi_Ge>; Standard.?stdapi_GetGlobalTime@core@@YA_KXZ
+63AA722B   52               PUSH EDX
+63AA722C   50               PUSH EAX
+63AA722D   FF15 341BCF63    CALL DWORD PTR DS:[<&Standard.?stdapi_Gl>; Standard.?stdapi_GlobalTimeToGameTime@core@@YAX_KAAK11@Z
+63AA7233   83C4 14          ADD ESP,14
+63AA7236   837D E4 06       CMP DWORD PTR SS:[EBP-1C],6
+63AA723A   73 03            JNB SHORT Pleione.63AA723F
+63AA723C   FF4D E8          DEC DWORD PTR SS:[EBP-18]
+63AA723F   8B86 40020000    MOV EAX,DWORD PTR DS:[ESI+240]
+63AA7245   85C0             TEST EAX,EAX
+63AA7247   0F86 A6000000    JBE Pleione.63AA72F3
+63AA724D   3945 E8          CMP DWORD PTR SS:[EBP-18],EAX
+63AA7250   0F86 9D000000    JBE Pleione.63AA72F3
+63AA7256   837D E4 06       CMP DWORD PTR SS:[EBP-1C],6
+63AA725A   0F82 93000000    JB Pleione.63AA72F3
+63AA7260   8B8E 18010000    MOV ECX,DWORD PTR DS:[ESI+118]
+63AA7266   E8 DEE50100      CALL Pleione.63AC5849
+63AA726B   84C0             TEST AL,AL
+63AA726D   74 7B            JE SHORT Pleione.63AA72EA
+63AA726F   68 002DD763      PUSH Pleione.63D72D00                    ; UNICODE "code.client.msg.nao_support.recharged"
+63AA7274   8D4D DC          LEA ECX,DWORD PTR SS:[EBP-24]
+63AA7277   FF15 ACF1CE63    CALL DWORD PTR DS:[<&ESL.??0?$CStringT@_>; ESL.??0?$CStringT@_WVunicode_string_trait@esl@@Vunicode_string_implement@2@@esl@@QAE@PB_W@Z
+63AA727D   8D45 DC          LEA EAX,DWORD PTR SS:[EBP-24]
+63AA7280   50               PUSH EAX
+63AA7281   8D45 CC          LEA EAX,DWORD PTR SS:[EBP-34]
+63AA7284   50               PUSH EAX
+63AA7285   C745 FC 02000000 MOV DWORD PTR SS:[EBP-4],2
+63AA728C   FF15 D013CF63    CALL DWORD PTR DS:[<&Standard.?Instance@>; Standard.?Instance@CLocalizer@core@@SAAAV12@XZ
+63AA7292   8BC8             MOV ECX,EAX
+63AA7294   FF15 D413CF63    CALL DWORD PTR DS:[<&Standard.?GetLocalT>; Standard.?GetLocalText@CLocalizer@core@@QBE?AVCFormatter@esl@@ABV?$CStringT@_WVunicode_string_trait@esl@@Vunicode_string_implement@2@@4@@Z
+63AA729A   8D4D E0          LEA ECX,DWORD PTR SS:[EBP-20]
+63AA729D   51               PUSH ECX
+63AA729E   8BC8             MOV ECX,EAX
+63AA72A0   C645 FC 03       MOV BYTE PTR SS:[EBP-4],3
+63AA72A4   FF15 ECF1CE63    CALL DWORD PTR DS:[<&ESL.??BCFormatter@e>; ESL.??BCFormatter@esl@@QBE?AV?$CStringT@_WVunicode_string_trait@esl@@Vunicode_string_implement@2@@1@XZ
+

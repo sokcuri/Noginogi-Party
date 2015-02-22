@@ -1,0 +1,36 @@
+#pragma once
+
+/* 시야 내 모든 이름표 표시
+ * PATCHES: PLEIONE.dll
+ *
+ * CTRL+H "VisionInAllName"
+ */
+
+#include "../Main.h"
+#include "../Singleton.h"
+#include "GenericPatcher.h"
+
+class CPatcher_VisionInAllName : public IGenericPatcher {
+public:
+	CPatcher_VisionInAllName();
+	bool Uninstall( void );
+	bool Toggle( void );
+
+	bool ReadINI( void );
+	bool WriteINI( void );
+	static bool IsPatchEnabled(void);
+	static bool PatchToggle(void);
+	static bool PatchEnable(void);
+	static bool PatchDisable(void);
+
+private:
+	// Options
+	static bool PatchEnabled;
+	static float VisionFloat;
+	// Hook functions
+	static void patchVisionInAllName(void);
+	// Variables for hook functions
+	LPBYTE funcPointer;
+};
+
+typedef Singleton<CPatcher_VisionInAllName> SngPatcher_VisionInAllName;
